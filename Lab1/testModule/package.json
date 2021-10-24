@@ -1,0 +1,12 @@
+{
+  "name": "censor",
+  "author": "J Hoczek",
+  "version": "0.0.1",
+  "description": "Kropkuje slowa",
+  "main": "cenzuratxt",
+  "dependencies": {
+  },
+  "engines": {
+    "node": "*"
+  }
+}
