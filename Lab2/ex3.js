@@ -1,26 +1,11 @@
-const all = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'q', 'p', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-const s = ['a','e','i','o','u','y'];
-let i = 0;
+const events = require("events");
 
-const findCommonElement = (el,tab) => { return tab.includes(el) };
+const EventEmiFunction = () => {
+    console.log("New task");
+};
 
-function Task(i) {
-    let timer = 500;
+const eventEmi = new events.EventEmitter();
 
-    setTimeout(() => {
-        console.log(all[i]);
-        if (findCommonElement(all[i], s))
-        {
-            console.log("Tutaj powinien byc opozniony tick");
-        }
-    }, timer * i);
-}
+eventEmi.on('request',EventEmiFunction);
 
-
-for (;i<all.length;i++)
-{
-    Task(i);
-}
-
-
-
+eventEmi.emit("request");
